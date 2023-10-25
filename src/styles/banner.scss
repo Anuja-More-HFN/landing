@@ -1,0 +1,124 @@
+@import "./variables";
+// Mixins
+@import "./media-queries";
+
+.carousel .control-prev.control-arrow {
+  background-image: url("/assets/back.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 100% !important;
+  left: 14px;
+  width: 42px;
+  opacity: 0.2;
+}
+.carousel .control-next.control-arrow {
+  background-image: url("/assets/next.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 100% !important;
+  right: 14px;
+  width: 42px;
+  opacity: 0.2;
+}
+.carousel .control-prev.control-arrow:before,
+.carousel .control-next.control-arrow:before {
+  content: none !important;
+}
+.carousel.carousel-slider .control-arrow {
+  color: black !important;
+}
+.carousel.carousel-slider .control-arrow:hover {
+  color: rgb(36, 36, 36) !important;
+  background-color: transparent !important;
+}
+.carousel .thumbs-wrapper {
+  margin: 0 !important;
+}
+.carousel .control-dots {
+  display: none !important;
+}
+.bannner_image {
+  max-width: 100%;
+  height: auto;
+  @include media-query(767px) {
+    object-fit: cover;
+  }
+  @include media-banner-medium {
+    object-fit: cover;
+  }
+  @include media-banner-small {
+    object-fit: cover;
+  }
+}
+
+.Banner-wrapper {
+  position: relative;
+  .carousel-arrow-prev {
+    top: 50% !important;
+    left: 10px !important;
+  }
+
+  .carousel-arrow-next {
+    top: 50%;
+    right: 10px;
+  }
+  .bannerContent {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 20px;
+
+    @include media-query(767px) {
+      width: 70%;
+      left: 50%;
+    }
+    @include media-query(450px) {
+      width: 80%;
+      left: 50%;
+    }
+
+    .primary-button {
+      @include media-query(767px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .title {
+    font-family: $font-family;
+    // font-family: Poppins;
+   font-weight: 700;
+   font-size: 48px;
+   color: var(--neutral-gray-700, #334155);
+    // color: $color-primary;
+    opacity: 1;
+
+    @include media-query(1024px) {
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    @include media-query(450px) {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }
+
+  .description {
+    font-family: $font-family;
+    // font-family: Poppins;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--neutral-gray-700, #334155);
+    @include media-query(1024px) {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    // @include media-query(767px) {
+    //   display: none;
+    // }
+  }
+}

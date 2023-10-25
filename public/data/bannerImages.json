@@ -1,0 +1,26 @@
+{
+  "bannerImages": [
+    { "id": "1",
+      "title": "Discover Heartfulness in Pune",
+      "description": "Transforming lives through innner peace",
+      "src": "/assets/bg.png",
+      "mobile_src": "/assets/bg.png",
+      "alt": "Meditation event at World's largest meditation center"
+    },
+    {
+      "id": "2",
+      "title": "Discover Heartfulness in Pune",
+      "description": "Transforming lives through innner peace",
+      "src": "/assets/bg.png",
+      "mobile_src": "/assets/bg.png",
+      "alt": "Meditation event at World's largest meditation center"
+    },
+    { "id": "3",
+      "title": "Discover Heartfulness in Pune",
+      "description": "Transforming lives through innner peace",
+      "src": "/assets/bg.png",
+      "mobile_src": "/assets/bg.png",
+      "alt": "Meditation event at World's largest meditation center"
+    }
+  ]
+}

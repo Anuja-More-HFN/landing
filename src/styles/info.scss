@@ -1,0 +1,38 @@
+@import "./variables";
+// Mixins
+@import "./media-queries";
+
+.infoWrapper{
+.text_styles{
+color: $text-color;
+font-size: 20px;
+font-weight: 500;
+line-height: 170%;
+letter-spacing: 0.5px;
+text-transform: lowercase;
+}
+.info_title{
+color: var(--neutral-gray-700, #334155);
+font-size: 48px;
+font-weight: 700;
+}
+.image_size{
+    height: 200px;
+    width: 200px;
+}
+ @media screen and (max-width: 767px) {
+    .info_title{
+font-size: 25px;
+font-weight: 500;
+}
+.image_size{
+    height: 150px;
+    width: 150px;
+}
+.text_styles{
+color: $text-color;
+font-size: 18px;
+font-weight: 300;
+}
+     }
+}

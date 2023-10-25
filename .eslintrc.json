@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["airbnb", "next/core-web-vitals", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/no-duplicates": "error",
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "error",
+    "react/no-danger": "error",
+    "react/no-typos": "error",
+    "react/no-unused-state": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-concat": "error",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/label-has-associated-control": "off", // overriding recommended rules
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-console": ["error"], // if needed we can use this by ["warn", { "allow": ["log"] }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-underscore-dangle": ["error"],
+    "react-hooks/exhaustive-deps": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      },
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
 }

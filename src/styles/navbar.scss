@@ -1,0 +1,127 @@
+@import "./variables";
+@import "./media-queries";
+.navbar_wrapper {
+  box-shadow: 0 0 4px rgba(1, 1, 1, 0.4);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-white;
+  // position: fixed;
+  .navbar_container {
+    font-family: $font-family;
+    flex-wrap: nowrap;
+    .menu_button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+  }
+.signin-container {
+  .text-styles {
+    font-size: 14px;
+    color: $lang-and-signin-color;
+    text-decoration: underline;
+     cursor: pointer;
+
+  }
+}
+.menu_wrapper {
+    .text-style{
+        font-size: 14px;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 0 !important;
+    }
+}
+  .lang-container {
+  .text-styles {
+    font-size: 14px;
+    color: $lang-and-signin-color;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+}
+
+
+  .mobile-logo {
+    display: none;
+    @include media-query(991px) {
+      display: block !important;
+      height: 45px !important;
+    }
+    @include media-extra-large {
+      display: none !important;
+    }
+  }
+
+  .image_height {
+    width: auto;
+    display: none;
+    @include media-extra-large {
+      display: block;
+    }
+  }
+
+  .moremenu_wrapper {
+    position: relative;
+
+    .moremenu_container {
+      display: flex;
+      align-items: center;
+      width: 200px;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      background-color: $color-white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      margin-top: 2px;
+    }
+
+    .menuItems {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        &:hover {
+          background-color: $bg-color;
+        }
+      }
+    }
+
+    .divider {
+      margin: 5px 0;
+      border: none;
+      border-top: 1px solid $border-color;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+  }
+  .menu_wrapper{
+    display: none !important;
+  }
+
+  .mobile-logo {
+    display: block !important;
+  }
+  .p-menu {
+     display: block !important;
+  }
+.menu_button{
+  display: block !important;
+}
+}
+}
